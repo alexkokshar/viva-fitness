@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.button`
   width: 35px;
   height: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
+  @media (min-width: 1275px) {
+    display: none;
+  }
 
   div {
     width: 100%;
@@ -14,21 +18,21 @@ const Wrapper = styled.div`
     transition: var(--trans);
     transform-origin: left;
     :nth-child(2) {
-      transform: ${(props) => (props.open ? 'translateX(-50px)' : 'translateX(0)')};
-      opacity: ${(props) => (props.open ? 0 : 1)};
+      transform: ${({ isMenuOpen }) => (isMenuOpen ? 'translateX(-50px)' : 'translateX(0)')};
+      opacity: ${({ isMenuOpen }) => (isMenuOpen ? 0 : 1)};
     }
     :nth-child(1) {
-      transform: ${(props) => (props.open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(45deg)' : 'rotate(0)')};
     }
     :nth-child(3) {
-      transform: ${(props) => (props.open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;
 
-const Burger = ({ open }) => {
+const Burger = ({ isMenuOpen, onClick }) => {
   return (
-    <Wrapper open={open}>
+    <Wrapper isMenuOpen={isMenuOpen} onClick={onClick}>
       <div />
       <div />
       <div />

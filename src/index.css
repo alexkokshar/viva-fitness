@@ -77,6 +77,10 @@ h6 {
   height: 100%;
 }
 
+html.no-scroll body {
+  overflow: hidden;
+}
+
 :root {
   /* Typography */
   --fw-thin: 300;
@@ -97,4 +101,5 @@ body {
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: var(--fw-reg);
+  overflow-x: hidden;
 }

@@ -1,5 +1,11 @@
+import Header from './components/layouts/Header/Header';
+
 function App() {
-  return <div>Hello viva fitness</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;
