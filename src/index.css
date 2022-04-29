@@ -40,6 +40,8 @@ input::-ms-clear {
 }
 button {
   cursor: pointer;
+  background-color: transparent;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
 }
 button::-moz-focus-inner {
   padding: 0;
