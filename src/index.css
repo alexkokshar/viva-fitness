@@ -90,6 +90,7 @@ h6 {
   --white: #fff;
   --red: #ee2c37;
   --red-hover: #d80410;
+  --trans: 0.3s ease-in-out;
 }
 
 body {
