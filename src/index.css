@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 * {
   padding: 0px;
   margin: 0px;
@@ -71,4 +73,25 @@ h6 {
 
 #root {
   height: 100%;
+}
+
+:root {
+  /* Typography */
+  --fw-thin: 300;
+  --fw-reg: 400;
+  --fw-med: 500;
+  --fw-bold: 700;
+
+  /* Other */
+  --black: #333;
+  --grey: #999;
+  --white: #fff;
+  --red: #ee2c37;
+  --red-hover: #d80410;
+}
+
+body {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: var(--fw-reg);
 }
