@@ -13,6 +13,7 @@ import Post20211231 from './pages/News/Posts/Post20211231';
 import Post20211230 from './pages/News/Posts/Post20211230';
 import Post20210315 from './pages/News/Posts/Post20210315';
 import Post20210208 from './pages/News/Posts/Post20210208';
+import Schedule from './pages/Schedule/Schedule';
 import App from './App';
 import './index.css';
 
@@ -34,6 +35,7 @@ root.render(
           <Route path="5" element={<Post20210315 />} />
           <Route path="6" element={<Post20210208 />} />
         </Route>
+        <Route path="/schedule" element={<Schedule />} />
       </Route>
     </Routes>
   </BrowserRouter>

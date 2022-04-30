@@ -1,0 +1,42 @@
+.table-wrapper {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 870px;
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  overflow: auto;
+  &__thead th,
+  &__tbody td {
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid #e7e7e7;
+    width: 146px;
+  }
+  &__thead {
+    & th {
+      padding: 7px 9px;
+      color: var(--grey);
+      text-align: left;
+    }
+  }
+  &__tbody {
+    & tr:not(:first-child) {
+      border-style: hidden;
+    }
+    & tr:nth-child(even) {
+      background-color: #f6f6f6;
+    }
+    & td {
+      padding: 11px 10px;
+      color: var(--black);
+    }
+    & time {
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+}

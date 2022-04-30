@@ -1,0 +1,42 @@
+.descr-container {
+  ul {
+    margin-left: 30px;
+  }
+  li {
+    list-style-type: none;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 300;
+    line-height: 1.4;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 8px;
+      height: 6px;
+      background-color: var(--red);
+      border-radius: 2px;
+      transform: skewX(-30deg);
+    }
+  }
+  .descr-bold {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 470px) {
+  .descr-container {
+    ul {
+      margin-left: 0;
+    }
+    li {
+      padding-left: 20px;
+    }
+  }
+}
