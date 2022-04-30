@@ -1,0 +1,120 @@
+.person {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow-y: auto;
+  &__inner {
+    margin-top: 170px;
+    position: relative;
+  }
+  &__content {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background-image: url('../../../assets/team/trainer-mask.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+  }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    svg {
+      fill: #fff;
+    }
+  }
+  &__name {
+    padding-top: 40px;
+    font-size: 30px;
+    color: var(--red);
+  }
+  &__position {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+  &__details {
+    margin-top: 24px;
+    color: var(--grey);
+    & div {
+      margin-bottom: 10px;
+    }
+  }
+  &__insta {
+  }
+  &__insta-icon {
+    fill: #fff;
+    transition: fill 0.3s ease-in-out;
+    &:hover {
+      fill: var(--red-hover);
+    }
+  }
+  &__links {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+  }
+  &__link-prev {
+  }
+  &__link-next {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1080px) {
+  .person {
+    &__content {
+      flex-direction: column;
+    }
+    &__info {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 655px) {
+  .person {
+    &__inner {
+      margin-top: 150px;
+    }
+    &__img {
+      &::after {
+        background-image: none;
+      }
+    }
+    &__photo {
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .person {
+    &__links {
+      flex-direction: column;
+    }
+    &__link-next {
+      margin-top: 25px;
+    }
+  }
+}
