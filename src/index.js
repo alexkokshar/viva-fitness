@@ -16,6 +16,7 @@ import Post20210315 from './pages/News/Posts/Post20210315';
 import Post20210208 from './pages/News/Posts/Post20210208';
 import Schedule from './pages/Schedule/Schedule';
 import Cards from './pages/Cards/Cards';
+import About from './pages/About/About';
 import Team from './pages/Team/Team';
 import TrainerModal from './pages/Team/TrainerModal/TrainerModal';
 import Contacts from './pages/Contacts/Contacts';
@@ -43,6 +44,7 @@ root.render(
         </Route>
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />}>
           <Route path="/team/:id" element={<TrainerModal />} />
         </Route>
