@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
+import Services from './pages/Services/Services';
 import NewsOverview from './pages/News/NewsOverview';
 import News2022 from './pages/News/News2022';
 import News2021 from './pages/News/News2021';
@@ -24,6 +25,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
+        <Route path="services" element={<Services />} />
         <Route path="news" element={<NewsOverview />}>
           <Route index element={<News2022 />} />
           <Route path="2021" element={<News2021 />} />
