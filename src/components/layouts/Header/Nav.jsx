@@ -74,7 +74,15 @@ const Nav = ({ setIsMenuOpen }) => {
         <List>
           {links.map(({ title, to }) => (
             <Item key={title}>
-              <NavLink to={to} onClick={() => setIsMenuOpen(false)}>
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive && 'red',
+                  };
+                }}
+                to={to}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {title}
               </NavLink>
             </Item>
