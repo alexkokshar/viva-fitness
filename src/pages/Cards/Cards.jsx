@@ -6,7 +6,7 @@ import { Container } from '../../components/UI/Container';
 import CardType from '../../components/cards/CardType';
 import handWithCard from '../../assets/cards/cards-hand-bg.png';
 import qrcode from '../../assets/cards/qrcode.jpg';
-import cardsBg from '../../assets/cards/cards-bg.png';
+import cardsBg from '../../assets/cards/cards-bg.jpg';
 
 const CardsWrapper = styled.div`
   padding-bottom: 60px;
