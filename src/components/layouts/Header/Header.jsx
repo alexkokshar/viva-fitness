@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { MdPhoneIphone } from 'react-icons/md';
 
+import { ModalContext } from '../../../App';
+import { MdPhoneIphone } from 'react-icons/md';
 import Nav from './Nav';
 import Burger from '../../UI/Burger';
 import { RedButton } from '../../UI/RedButton';
@@ -77,6 +78,8 @@ function Header() {
   const [isPhoneOpen, setIsPhoneOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const { setIsModalOpen } = useContext(ModalContext);
+
   window.onscroll = () => {
     window.pageYOffset ? setIsScrolled(true) : setIsScrolled(false);
   };
@@ -104,7 +107,7 @@ function Header() {
             isScrolled={isScrolled}
           />
         </Phone>
-        <div className="phone-btn">
+        <div className="phone-btn" onClick={() => setIsModalOpen(true)}>
           <RedButton>Запись онлайн</RedButton>
         </div>
       </HeaderContent>

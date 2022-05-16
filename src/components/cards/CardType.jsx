@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
+import { ModalContext } from '../../App';
 import DescriptionContainer from '../schedule/DescriptionContainer/DescriptionContainer';
 import { RedButton } from '../UI/RedButton';
 
@@ -90,6 +91,8 @@ function CardType(props) {
   const { activeTab } = props;
   const { setActiveTab } = props;
 
+  const { setIsModalOpen } = useContext(ModalContext);
+
   return (
     <Card>
       <Button id={id} activeTab={activeTab} onClick={() => setActiveTab(id)}>
@@ -119,7 +122,7 @@ function CardType(props) {
             </DescriptionContainer>
           </Services>
         </Info>
-        <Btn>
+        <Btn onClick={() => setIsModalOpen(true)}>
           <RedButton>Заказать</RedButton>
         </Btn>
       </Details>
