@@ -67,14 +67,16 @@ const links = [
   },
 ];
 
-const Nav = () => {
+const Nav = ({ setIsMenuOpen }) => {
   return (
     <>
       <NavBar>
         <List>
           {links.map(({ title, to }) => (
             <Item key={title}>
-              <NavLink to={to}>{title}</NavLink>
+              <NavLink to={to} onClick={() => setIsMenuOpen(false)}>
+                {title}
+              </NavLink>
             </Item>
           ))}
         </List>

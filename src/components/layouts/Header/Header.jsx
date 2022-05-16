@@ -90,6 +90,7 @@ function Header() {
     } else {
       document.documentElement.classList.remove('no-scroll');
     }
+    window.scrollTo(0, 0);
   }, [isMenuOpen]);
 
   return (
@@ -98,7 +99,7 @@ function Header() {
         <Logo />
       </Link>
       <HeaderContent isMenuOpen={isMenuOpen}>
-        <Nav />
+        <Nav setIsMenuOpen={setIsMenuOpen} />
         <Phone>
           <MdPhoneIphone onClick={() => setIsPhoneOpen(!isPhoneOpen)} />
           <PhonePopap
