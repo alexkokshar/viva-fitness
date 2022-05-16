@@ -97,7 +97,7 @@ function CardType(props) {
     <Card>
       <Button id={id} activeTab={activeTab} onClick={() => setActiveTab(id)}>
         <Title>{name}</Title>
-        <Price>{price}</Price>
+        <Price>{price} ₽</Price>
       </Button>
       <Details id={id} activeTab={activeTab}>
         <Info>
