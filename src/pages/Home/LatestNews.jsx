@@ -151,7 +151,9 @@ function LatestNews() {
   return (
     <Background>
       <Container>
-        <h2 className="title">Новости клуба</h2>
+        <h2 className="title" style={{ marginTop: '30px' }}>
+          Новости клуба
+        </h2>
         <ul style={{ minHeight: '1000px' }}>
           <Item>
             <Link to="/posts">
