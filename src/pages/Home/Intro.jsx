@@ -8,9 +8,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { RedButton } from '../../components/UI/RedButton';
 
-import sliderBg1 from '../../assets/bg/intro-swiper/1.jpg';
-import sliderBg2 from '../../assets/bg/intro-swiper/2.jpg';
-import sliderBg3 from '../../assets/bg/intro-swiper/3.jpg';
+import sliderBg1 from '../../assets/bg/intro-swiper-1.jpg';
+import sliderBg2 from '../../assets/bg/intro-swiper-2.jpg';
+import sliderBg3 from '../../assets/bg/intro-swiper-3.jpg';
 
 const Wrapper = styled.section`
   .swiper-pagination-bullet {
